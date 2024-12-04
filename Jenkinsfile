@@ -25,8 +25,8 @@ pipeline {
                     def appName = 'francisco-ciclo2-microservice'
                     def imageTag = "${appName}:${env.BUILD_ID}"
                     // Parar e remover o container existente, se houver
-                    bat "docker stop ${appName}"
-                    bat "docker rm ${appName}"
+                    //bat "docker stop ${appName}"
+                    //bat "docker rm ${appName}"
                     // Executar o novo container
                     bat "docker run -d --name ${appName} ${imageTag}"
                 }
